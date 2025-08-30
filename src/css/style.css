@@ -6,6 +6,7 @@
   --color-grey: #cacaca;
 
   --header-gap: 85px;
+  --list-gap: 32px;
 }
 @font-face {
   font-family: "Montserrat";
@@ -80,6 +81,9 @@ h4 {
 p {
   margin: 0;
 }
+figure, figcaption {
+  margin: 0;
+}
 /* Default style end */
 
 /* Global style start */
@@ -116,6 +120,12 @@ p {
 
 .btn {
   color: var(--color-light);
+}
+
+.section-title {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 100%;
 }
 
 /* Global style end */
@@ -208,3 +218,30 @@ p {
 }
 
 /* Hero style end */
+
+/* About us style start */
+
+.about-us {
+  padding-top: 8px;
+
+  --offsets: 1;
+}
+
+.about-us__title {
+  margin-bottom: 29px;
+}
+
+.about-us__descr {
+  max-width: 1235px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+.about-us__cards {
+  display: flex;
+  gap: var(--list-gap);
+}
+
+/* About us style end */
