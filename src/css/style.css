@@ -7,6 +7,8 @@
 
   --header-gap: 85px;
   --list-gap: 32px;
+
+  --border-radius: 32px;
 }
 @font-face {
   font-family: "Montserrat";
@@ -66,6 +68,8 @@ img {
 body {
   min-width: 320px;
 
+  /* height: 5000px; */
+
   background-color: var(--color-light);
 
   font-family: "Montserrat", sans-serif;
@@ -81,7 +85,8 @@ h4 {
 p {
   margin: 0;
 }
-figure, figcaption {
+figure,
+figcaption {
   margin: 0;
 }
 /* Default style end */
@@ -134,8 +139,8 @@ figure, figcaption {
 
 .header {
   box-shadow: 0px 5px 40px 0px #0000001a;
-  border-end-end-radius: 32px;
-  border-end-start-radius: 32px;
+  border-end-end-radius: var(--border-radius);
+  border-end-start-radius: var(--border-radius);
 }
 
 .header__container {
@@ -180,7 +185,7 @@ figure, figcaption {
   background-position: center;
   background-size: cover;
 
-  border-radius: 32px;
+  border-radius: var(--border-radius);
 }
 
 .hero__wrapper {
@@ -224,7 +229,7 @@ figure, figcaption {
 .about-us {
   padding-top: 8px;
 
-  --offsets: 1;
+  
 }
 
 .about-us__title {
@@ -242,6 +247,85 @@ figure, figcaption {
 .about-us__cards {
   display: flex;
   gap: var(--list-gap);
+  flex-wrap: wrap;
+
+  padding-top: 46px;
+}
+
+.about-us__card--width {
+  --offsets: 1;
+  display: block;
+  width: calc(
+    (100% - (var(--list-gap) * var(--offsets))) / (var(--offsets) + 1)
+  );
+}
+
+.about-us__figure {
+  position: relative;
+
+  border-radius: var(--border-radius);
+}
+
+.about-us__figcaption {
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 48px 50px 52px 50px;
+
+  bottom: 4.7px;
+
+  background-color: rgba(0, 0, 0, 0.5);
+
+  border-radius: var(--border-radius);
+}
+
+.about-us__figcaption-descr {
+  max-width: 433px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 32px;
+
+  color: var(--color-light);
+}
+
+.about-us__figcaption-btn {
+  padding: 20px 35px;
+  border: 3px solid var(--main-bg-btn);
+  border-radius: 16px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  text-align: center;
+}
+
+.about-us__right-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--list-gap);
+}
+
+.about-us__article {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.about-us__article--bg-box {
+  background-image: url('../img/box-icon.svg');
+}
+
+.about-us__article--bg-gear {
+  background-image: url('../img/gear-icon.svg');
+}
+
+.about-us__subtitle {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100%;
 }
 
 /* About us style end */
