@@ -309,16 +309,22 @@ figcaption {
   gap: var(--list-gap);
 }
 
-.about-us__article {
+.about-us__article::before {
+  content: "";
+  width: 190px;
+  height: 165px;
+  display: block;
+  flex-shrink: 0;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: contain;
 }
 
-.about-us__article--bg-box {
+.about-us__article--bg-box::before {
   background-image: url('../img/box-icon.svg');
 }
 
-.about-us__article--bg-gear {
+.about-us__article--bg-gear::before {
   background-image: url('../img/gear-icon.svg');
 }
 
