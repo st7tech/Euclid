@@ -176,7 +176,8 @@ figcaption {
 /* Heor style start */
 
 .hero {
-  padding: 50px 0;
+  padding-top: 50px;
+  margin-bottom: 50px;
 }
 
 .hero__bg {
@@ -228,8 +229,7 @@ figcaption {
 
 .about-us {
   padding-top: 8px;
-
-  
+  margin-bottom: 103px;
 }
 
 .about-us__title {
@@ -273,7 +273,7 @@ figcaption {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 48px 50px 52px 50px;
+  padding: 48px 50px 49px 50px;
 
   bottom: 4.7px;
 
@@ -309,6 +309,15 @@ figcaption {
   gap: var(--list-gap);
 }
 
+.about-us__article {
+  display: flex;
+  align-items: center;
+  padding: 65px 0 65px 60px;
+
+  border: 1px solid #cacaca;
+  border-radius: var(--border-radius);
+}
+
 .about-us__article::before {
   content: "";
   width: 190px;
@@ -318,20 +327,109 @@ figcaption {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  margin-right: 50px;
 }
 
 .about-us__article--bg-box::before {
-  background-image: url('../img/box-icon.svg');
+  background-image: url("../img/box-icon.svg");
 }
 
 .about-us__article--bg-gear::before {
-  background-image: url('../img/gear-icon.svg');
+  background-image: url("../img/gear-icon.svg");
+}
+
+.about-us__article--wrapper {
+  max-width: 452px;
 }
 
 .about-us__subtitle {
   font-weight: 700;
   font-size: 24px;
   line-height: 100%;
+
+  margin-bottom: 11px;
+}
+
+.about-us__subtitle-descr {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
 }
 
 /* About us style end */
+
+/* Stages style start */
+
+.stages__title {
+  margin-bottom: 41px;
+}
+
+.stages__subtitle {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+
+  margin-bottom: 8px;
+}
+
+.stages__descr {
+  max-width: 758px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+}
+.stages__descr:last-of-type {
+  margin-bottom: 16px;
+}
+
+.stages__contents {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  --offsets: 1;
+  --distance: 32px;
+}
+
+.stages__content--width {
+  width: calc(
+    (100% - (var(--offsets) * var(--distance))) / (var(--offsets) + 1)
+  );
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.stages__btn {
+  display: block;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  text-align: center;
+
+  padding: 20px 38px;
+  border-radius: 16px;
+
+  background-color: var(--main-bg-btn);
+}
+
+.btn--dark {
+  background-color: transparent;
+
+  border: 1px solid #000;
+  color: #000;
+}
+
+.stages__img {
+  background-image: url('../img/benefits.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Stages style end */
