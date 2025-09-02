@@ -117,7 +117,7 @@ figcaption {
   cursor: pointer;
 }
 
-.list-reset {
+.list--reset {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -127,7 +127,7 @@ figcaption {
   color: var(--color-light);
 }
 
-.section-title {
+.section__title {
   font-weight: 400;
   font-size: 48px;
   line-height: 100%;
@@ -168,7 +168,7 @@ figcaption {
 .nav__link {
   font-weight: 600;
   font-size: 18px;
-  line-height: 100%;
+  line-height: 99%;
 }
 
 /* Header style end */
@@ -360,6 +360,10 @@ figcaption {
 
 /* Stages style start */
 
+.stages {
+  margin-bottom: 106px;
+}
+
 .stages__title {
   margin-bottom: 41px;
 }
@@ -426,10 +430,77 @@ figcaption {
 }
 
 .stages__img {
-  background-image: url('../img/benefits.jpg');
+  background-image: url("../img/benefits.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 /* Stages style end */
+
+/* Question style start */
+
+.question {
+  margin-bottom: 100px;
+}
+
+.question__title {
+  margin-bottom: 32px;
+}
+
+.question__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--list-gap);
+
+  --offsets: 2;
+}
+
+.question__item {
+  width: calc(
+    (100% - (var(--list-gap) * var(--offsets))) / (var(--offsets) + 1)
+  );
+
+  padding: 73px 65px 65px 60px;
+
+  border: 1px solid #CACACA;
+  border-radius: var(--border-radius);
+}
+
+/* .question__item-text {
+  max-width: 450px;
+} */
+
+.question__subtitle {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 107%;
+  max-width: 412px;
+
+  margin-bottom: 12px;
+}
+
+.question__descr {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  max-width: 450px;
+}
+
+/* Question style end */
+
+/* Footer style start */
+
+.footer {
+  background-color: #000;
+}
+
+.footer__logo svg {
+  fill: white;
+}
+
+.footer__nav {
+  color: var(--color-light);
+}
+
+/* Footer style end */
