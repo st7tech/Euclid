@@ -162,6 +162,9 @@ figcaption {
 .nav__list {
   display: flex;
   align-items: center;
+}
+
+.header-nav__list {
   gap: var(--header-gap);
 }
 
@@ -441,7 +444,7 @@ figcaption {
 /* Question style start */
 
 .question {
-  margin-bottom: 100px;
+  margin-bottom: 98px;
 }
 
 .question__title {
@@ -463,7 +466,7 @@ figcaption {
 
   padding: 73px 65px 65px 60px;
 
-  border: 1px solid #CACACA;
+  border: 1px solid #cacaca;
   border-radius: var(--border-radius);
 }
 
@@ -495,12 +498,136 @@ figcaption {
   background-color: #000;
 }
 
-.footer__logo svg {
-  fill: white;
+.footer__container {
+  display: flex;
+
+  padding-top: 48px;
+  padding-bottom: 46px;
+}
+
+.footer__left {
+  margin-right: auto;
+}
+
+.footer__logo {
+  display: block;
+  margin-bottom: 16px;
 }
 
 .footer__nav {
   color: var(--color-light);
+
+  margin-bottom: 90px;
 }
 
+.footer__nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.footer__nav-link {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 36px;
+}
+
+.footer__list {
+  display: flex;
+}
+
+.footer__item {
+  margin-right: 25px;
+}
+
+.footer__descr {
+  max-width: 363px;
+
+  padding-top: 87px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: var(--color-light);
+}
+
+.footer__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__title {
+  color: var(--color-light);
+  margin-bottom: 30px;
+}
+
+.footer__center {
+  margin-right: 236px;
+  max-width: 570px;
+
+  padding-top: 7px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  /* align-items: start; */
+  gap: 25px;
+
+  width: 570px;
+}
+
+.form__input-text {
+  padding: 23px 0 16px 24px;
+
+  border-radius: 16px;
+
+  background-color: #414141;
+}
+.form__input-text::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: #cacaca;
+}
+
+.form__text-area {
+  min-height: 150px;
+
+  margin-bottom: 5px;
+}
+
+.form__checkbox-text {
+  flex-shrink: 0;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: #cacaca;
+}
+
+.footer__btns {
+  display: flex;
+  align-items: center;
+}
+
+.footer__btn {
+  background-color: var(--main-bg-btn);
+
+  flex-shrink: 0;
+  margin-right: 22px;
+
+  border-radius: 16px;
+
+  padding: 22px 52px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  text-align: center;
+}
+
+.form__checkbox {
+  margin-right: 6px;
+}
 /* Footer style end */
