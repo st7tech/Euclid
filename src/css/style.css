@@ -172,8 +172,41 @@ figcaption {
   font-weight: 600;
   font-size: 18px;
   line-height: 99%;
+
+  transition: all 0.1s ease-in-out;
+}
+.nav__link:hover {
+  border-bottom: 2px solid var(--main-bg-btn);
+  padding-bottom: 7px;
+}
+.nav__link:focus-visible {
+  outline: 2px solid var(--main-bg-btn);
+  outline-offset: 5px;
+
+  padding: 0;
+}
+.nav__link:active {
+  color: #E1670E;
+  border-bottom: 2px solid #E1670E;
+  outline: none;
 }
 
+.header__btn svg rect{
+  transition: all 0.3s ease-in-out;
+}
+.header__btn svg path{
+  transition: all 0.3s ease-in-out;
+}
+.header__btn:focus-visible {
+  outline: 2px solid var(--main-bg-btn);
+  outline-offset: 4px;
+}
+.header__btn:hover svg path {
+  stroke: #FF9900;
+}
+.header__btn:hover svg rect {
+  fill: var(--main-bg-btn);
+}
 /* Header style end */
 
 /* Heor style start */
